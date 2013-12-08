@@ -1,4 +1,4 @@
-cast-ios-demo-player
+cast-chrome-sender-helloworld
 ====================
 
 This Google Cast demo app shows basic casting of video and audio to Chromecast device from Chrome browser.
