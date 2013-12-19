@@ -1,4 +1,4 @@
-<html>
+  <html>
   <!--
   <script src="https://www.gstatic.com/eureka/js/chromekey_receiver.js">
   -->
@@ -7,14 +7,12 @@
   <script type="text/javascript">
 
 cast.receiver.logger.setLevelValue(0);
-var receiver = new cast.receiver.Receiver(
-    'YOUR_APP_ID', [cast.receiver.RemoteMedia.NAMESPACE],
-    "",
-    5);
-var remoteMedia = new cast.receiver.RemoteMedia();
-remoteMedia.addChannelFactory(
-    receiver.createChannelFactory(cast.receiver.RemoteMedia.NAMESPACE));
 
+var ns = cast.receiver.RemoteMedia.NAMESPACE;
+var APP_ID = 'YOUR_APP_ID';
+var receiver = new cast.receiver.Receiver(APP_ID, [ns], "", 5);
+var remoteMedia = new cast.receiver.RemoteMedia();
+remoteMedia.addChannelFactory(receiver.createChannelFactory(ns));
 receiver.start();
 
 window.addEventListener('load', function() {
